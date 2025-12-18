@@ -7,6 +7,7 @@ from google.analytics.data_v1beta.types import (
 )
 from google.oauth2 import service_account
 
+
 def run_ga4_report(
     property_id: str,
     metrics: list[str],

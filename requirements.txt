@@ -3,6 +3,7 @@ uvicorn
 pydantic
 google-analytics-data
 google-auth
+google-api-python-client
 openai
 python-dotenv
 pandas
