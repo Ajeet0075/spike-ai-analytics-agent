@@ -106,7 +106,9 @@ APP_PORT=8080
 
 # LiteLLM
 LITELLM_API_KEY=sk-...
+
 LITELLM_BASE_URL=http://3.110.18.218
+
 LITELLM_MODEL=gemini-1.5-flash
 
 # SEO
