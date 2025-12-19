@@ -56,8 +56,6 @@ Orchestrator
 └──► SEO Agent ──► Google Sheets (Screaming Frog)
 └──► LLM (Explanation)
 
-yaml
-Copy code
 
 This architecture clearly demonstrates:
 
@@ -87,8 +85,10 @@ Accepts a natural-language question and optionally a GA4 property ID.
   "query": "Give me daily page views and users for the last 7 days",
   "propertyId": "GA4_PROPERTY_ID"
 }
-Example Queries
-Analytics (GA4)
+```
+
+## Example Queries
+### Analytics (GA4)
 Give me daily page views and users for the last 14 days
 
 How many active users did we have recently?
@@ -99,7 +99,7 @@ What is our recent traffic performance?
 
 How many sessions did we get recently?
 
-SEO (Google Sheets)
+### SEO (Google Sheets)
 Find pages with missing meta descriptions
 
 Which pages have low word count?
@@ -110,9 +110,8 @@ Find pages missing canonical tags
 
 Which pages are not indexable?
 
-Example Response
-json
-Copy code
+### Example Response
+```json
 {
   "agent": "analytics",
   "answer": "I checked your Google Analytics data for the last 14 days, but there is currently no recorded traffic available. Once your website starts receiving users, this agent will provide daily trends and insights.",
@@ -122,13 +121,11 @@ Copy code
     "row_count": 0
   }
 }
+```
 The system always responds in natural language, even when no data is available.
 
-Configuration
+## Configuration
 All environment-specific configuration is managed using a .env file.
-
-env
-Copy code
 # App
 APP_PORT=8080
 
@@ -137,24 +134,21 @@ LITELLM_API_KEY=sk-...
 
 LITELLM_BASE_URL=http://3.110.18.218
 
-LITELLM_MODEL=gemini-1.5-flash
+LITELLM_MODEL=gemini-2.5-flash
 
 # SEO
 SEO_SPREADSHEET_ID=1zzf4ax_H2WiTBVrJigGjF2Q3Yz-qy2qMCbAMKvl6VEE
 Sensitive files such as credentials.json are excluded from version control.
 
-Running Instructions
-Start the FastAPI server using Uvicorn:
-
-bash
-Copy code
+## Running Instructions
+### Start the FastAPI server using Uvicorn:
 uvicorn app.main:app --port 8080
-API documentation is available at:
 
-arduino
-Copy code
+### API documentation is available at:
 http://127.0.0.1:8080/docs
-Design Principles
+
+
+## Design Principles
 Agent-based orchestration
 
 Deterministic fallbacks (no hallucination)
@@ -165,7 +159,7 @@ Clean separation of configuration and logic
 
 Production-style backend architecture
 
-Final Status
+## Final Status
 GA4 Analytics Agent implemented
 
 SEO Agent (all sheets) implemented
