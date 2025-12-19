@@ -51,10 +51,10 @@ POST /query
 ▼
 Orchestrator
 ├──► Analytics Agent ──► GA4 Data API
-│ └──► LLM (Explanation)
+│ └──► LLM
 │
 └──► SEO Agent ──► Google Sheets (Screaming Frog)
-└──► LLM (Explanation)
+└──► LLM
 
 
 This architecture clearly demonstrates:
