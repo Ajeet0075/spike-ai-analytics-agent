@@ -1,6 +1,6 @@
-# Spike AI Analytics & SEO Agent
+# InsightForge AI – Agent-Based Analytics & SEO Intelligence Platform
 
-An **agent-based AI backend system** that answers natural-language marketing questions by orchestrating multiple specialized agents over real analytics and SEO datasets.
+> Natural-language analytics & SEO intelligence powered by deterministic AI agents
 
 The system dynamically routes each query to the correct agent and always responds in **clear, human-readable language**, rather than raw JSON or database output.
 
